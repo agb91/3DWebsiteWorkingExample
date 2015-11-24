@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require home
+//= require home_square
 //= require three
 //= require tween
 //= require CSS3DRenderer

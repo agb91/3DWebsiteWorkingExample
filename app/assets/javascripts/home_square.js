@@ -6,32 +6,27 @@ jQuery(document).ready(function() {
         "C", "Terzo", "3", 3, 1,
         "D", "Quarto", "4", 4, 1,
         "E", "Cinque", "5", 5, 1,
-
-        "F", "Sei", "6", 1, 2,
-        "G", "Sette", "7", 2, 2,
-        "H", "Otto", "8", 3, 2,
-        "I", "Nove", "9", 4, 2,
-        "J", "Dieci", "10", 5, 2,
-
-        "K", "Undici", "11", 1, 3,
-        "L", "Dodici", "12", 2, 3,
-        "M", "Tredici", "13", 3, 3,
-        "N", "Fourteen", "13", 4, 3,
-        "O", "Quindici", "15", 5, 3,
-
-        "P", "Sedici", "16", 1, 4,
-        "Q", "7teen", "17", 2, 4,
-        "R", "Diciotto", "18", 3, 4,
-        "S", "Dicia9", "19", 4, 4,
-        "T", "Venti", "20", 5, 4,
-
-        "U", "Ventuno", "21", 1, 5,
-        "V", "Venti2", "22", 2, 5,
-        "W", "Venti3", "23", 3, 5,
-        "X", "Venti4", "24", 4, 5,
-        "Y", "Venti5", "25", 5, 5,
-
-        /*"Z", "Venti6", "26", 8, 3,
+        "F", "Sei", "6", 6, 1,
+        "G", "Sette", "7", 7, 1,
+        "H", "Otto", "8", 8, 1,
+        "I", "Nove", "9", 9, 1,
+        "J", "Dieci", "10", 1, 2,
+        "K", "Undici", "11", 2, 2,
+        "L", "Dodici", "12", 3, 2,
+        "M", "Tredici", "13", 4, 2,
+        "N", "Fourteen", "13", 5, 2,
+        "O", "Quindici", "15", 6, 2,
+        "P", "Sedici", "16", 7, 2,
+        "Q", "7teen", "17", 8, 2,
+        "R", "Diciotto", "18", 9, 2,
+        "S", "Dicia9", "19", 1, 3,
+        "T", "Venti", "20", 2, 3,
+        "U", "Ventuno", "21", 3, 3,
+        "V", "Venti2", "22", 4, 3,
+        "W", "Venti3", "23", 5, 3,
+        "X", "Venti4", "24", 6, 3,
+        "Y", "Venti5", "25", 7, 3,
+        "Z", "Venti6", "26", 8, 3,
         "@", "Venti7", "27", 9, 3,
         "a", "Vent8", "28", 1, 4,
         "b", "Venti9", "29", 2, 4,
@@ -41,7 +36,7 @@ jQuery(document).ready(function() {
         "f", "Trenta3", "33", 6, 4,
         "g", "Trenta4", "34", 7, 4,
         "h", "Trenta5", "35", 8, 4,
-        "i", "Trenta6", "36", 9, 4,*/
+        "i", "Trenta6", "36", 9, 4,
       ];
 
       var camera, scene, renderer;
@@ -61,24 +56,29 @@ jQuery(document).ready(function() {
         scene = new THREE.Scene();
 
         // table
-        var cont = 0;
+
         for ( var i = 0; i < table.length; i += 5 ) {
-          cont++;
+
           var element = document.createElement( 'div' );
-          element.className = 'element';
+          element.className = 'element-s';
+          element.style.backgroundColor = 'rgba(' +
+               127 +
+                 ',' + Math.floor(Math.random()*255)
+                + ',' + Math.floor(Math.random()*255) + ','
+                + ( Math.random() * 0.5 + 0.25 ) + ')';
 
           var number = document.createElement( 'div' );
-          number.className = 'number';
+          number.className = 'number-s';
           number.textContent = (i/5) + 1;
           element.appendChild( number );
 
           var symbol = document.createElement( 'div' );
-          symbol.className = 'symbol';
+          symbol.className = 'symbol-s';
           symbol.textContent = table[ i ];
           element.appendChild( symbol );
 
           var details = document.createElement( 'div' );
-          details.className = 'details';
+          details.className = 'details-s';
           details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];
           element.appendChild( details );
 
@@ -94,13 +94,8 @@ jQuery(document).ready(function() {
           //
 
           var object = new THREE.Object3D();
-          var offset = 0;
-          if(cont % 10 == 6 || cont % 10 == 7 || cont % 10 == 8 || cont % 10 == 9 || cont % 10 == 0)
-          {
-            offset = 200;
-          }
-          object.position.x = ( table[ i + 3 ] * 400 ) - 1330 + offset;
-          object.position.y = - ( table[ i + 4 ] * 350 ) + 990;
+          object.position.x = ( table[ i + 3 ] * 260 ) - 1330;
+          object.position.y = - ( table[ i + 4 ] * 300 ) + 990;
 
           targets.table.push( object );
 
@@ -139,9 +134,9 @@ jQuery(document).ready(function() {
 
           var object = new THREE.Object3D();
 
-          object.position.x = 1000 * Math.sin( phi );
+          object.position.x = 1500 * Math.sin( phi );
           object.position.y = - ( i * 30 ) + 450;
-          object.position.z = 1000 * Math.cos( phi );
+          object.position.z = 1500 * Math.cos( phi );
 
           vector.x = object.position.x * 2;
           vector.y = object.position.y;
@@ -172,10 +167,7 @@ jQuery(document).ready(function() {
         renderer = new THREE.CSS3DRenderer();
         renderer.setSize( window.innerWidth, window.innerHeight );
         renderer.domElement.style.position = 'absolute';
-        if(document.getElementById( 'container' ))
-        {
-          document.getElementById( 'container' ).appendChild( renderer.domElement );
-        }
+        document.getElementById( 'container-s' ).appendChild( renderer.domElement );
 
         //
 
@@ -185,47 +177,33 @@ jQuery(document).ready(function() {
         controls.maxDistance = 6000;
         controls.addEventListener( 'change', render );
 
+        var button = document.getElementById( 'table-s' );
+        button.addEventListener( 'click', function ( event ) {
 
-        var button = document.getElementById( 'table' );
-        if(button)
-        {
-          button.addEventListener( 'click', function ( event ) {
+          transform( targets.table, 2000 );
 
-            transform( targets.table, 2000 );
+        }, false );
 
-          }, false );
-        }
+        var button = document.getElementById( 'sphere-s' );
+        button.addEventListener( 'click', function ( event ) {
 
+          transform( targets.sphere, 2000 );
 
-        var button = document.getElementById( 'sphere' );
-        if(button)
-        {
-          button.addEventListener( 'click', function ( event ) {
+        }, false );
 
-            transform( targets.sphere, 2000 );
+        var button = document.getElementById( 'helix-s' );
+        button.addEventListener( 'click', function ( event ) {
 
-          }, false );
-        }
+          transform( targets.helix, 2000 );
 
-        var button = document.getElementById( 'helix' );
-        if(button)
-        {
-          button.addEventListener( 'click', function ( event ) {
+        }, false );
 
-            transform( targets.helix, 2000 );
+        var button = document.getElementById( 'grid-s' );
+        button.addEventListener( 'click', function ( event ) {
 
-          }, false );
-        }
+          transform( targets.grid, 2000 );
 
-        var button = document.getElementById( 'grid' );
-        if(button)
-        {
-          button.addEventListener( 'click', function ( event ) {
-
-            transform( targets.grid, 2000 );
-
-          }, false );
-        }
+        }, false );
 
         transform( targets.table, 2000 );
 

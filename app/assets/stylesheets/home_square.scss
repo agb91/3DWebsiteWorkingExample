@@ -3,15 +3,15 @@ html, body {
 }
 
 body {
-  .title
+  .title-s
   {
     z-index: 3;
     color: red;
     text-align: center;
   }
-  .container
+  .container-s
   {
-    margin-top: 0px;
+    margin-top: -70px;
   }
   background-color: #000000;
   margin: 0;
@@ -23,7 +23,7 @@ a {
   color: #ffffff;
 }
 
-#info {
+#info-s {
   position: absolute;
   width: 100%;
   color: #ffffff;
@@ -35,63 +35,38 @@ a {
   z-index: 1;
 }
 
-#menu {
+#menu-s {
   position: absolute;
   bottom: 20px;
   width: 100%;
   text-align: center;
 }
 
-.element {
+.element-s {
+  width: 220px;
+  height: 260px;
   box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
   border: 1px solid rgba(127,255,255,0.25);
-  //text-align: center;
+  text-align: center;
   cursor: default;
-  position: relative;
-  background-color: rgba(36 ,36, 150, 1);
-  width: 400px;
-  height: 230.94px;
-  margin: 115.47px 0;
 }
 
-.element:before,
-.element:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 200px solid transparent;
-  border-right: 200px solid transparent;
-}
-
-.element:before {
-  bottom: 100%;
-  border-bottom: 115.47px solid rgba(36 ,36, 150, 1);
-}
-
-.element:after {
-  top: 100%;
-  width: 0;
-  border-top: 115.47px solid rgba(36 ,36, 150, 1);
-}
-
-.element:hover {
+.element-s:hover {
   box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
   border: 1px solid rgba(127,255,255,0.75);
 }
 
-  .element .number {
+  .element-s .number-s {
     position: absolute;
-    text-align: center;
     top: 20px;
     right: 20px;
     font-size: 22px;
     color: rgba(127,255,255,0.75);
   }
 
-  .element .symbol {
+  .element-s .symbol-s {
     position: absolute;
-    text-align: center;
-    top: 20px;
+    top: 40px;
     left: 0px;
     right: 0px;
     font-size: 100px;
@@ -100,9 +75,8 @@ a {
     text-shadow: 0 0 10px rgba(0,255,255,0.95);
   }
 
-  .element .details {
+  .element-s .details-s {
     position: absolute;
-    text-align: center;
     bottom: 0px;
     left: 0px;
     right: 0px;
