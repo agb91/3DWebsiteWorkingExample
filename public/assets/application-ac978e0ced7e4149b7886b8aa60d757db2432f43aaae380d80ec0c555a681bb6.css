@@ -1,0 +1,275 @@
+/* line 1, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 5, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+body {
+  background-color: #000000;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  overflow: hidden;
+}
+/* line 6, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+body .title {
+  z-index: 3;
+  color: red;
+  text-align: center;
+}
+/* line 12, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+body .container {
+  margin-top: 0px;
+}
+
+/* line 22, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+a {
+  color: #ffffff;
+}
+
+/* line 26, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+#info {
+  position: absolute;
+  width: 100%;
+  color: #ffffff;
+  padding: 5px;
+  font-family: Monospace;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+/* line 38, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+#menu {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 45, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element {
+  box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.5);
+  border: 1px solid rgba(127, 255, 255, 0.25);
+  cursor: default;
+  position: relative;
+  background-color: #242496;
+  width: 400px;
+  height: 230.94px;
+  margin: 115.47px 0;
+}
+
+/* line 57, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element:before,
+.element:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+}
+
+/* line 66, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element:before {
+  bottom: 100%;
+  border-bottom: 115.47px solid #242496;
+}
+
+/* line 71, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element:after {
+  top: 100%;
+  width: 0;
+  border-top: 115.47px solid #242496;
+}
+
+/* line 77, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element:hover {
+  box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.75);
+  border: 1px solid rgba(127, 255, 255, 0.75);
+}
+
+/* line 82, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element .number {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  color: rgba(127, 255, 255, 0.75);
+}
+
+/* line 91, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element .symbol {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  left: 0px;
+  right: 0px;
+  font-size: 100px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.95);
+}
+
+/* line 103, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+.element .details {
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  font-size: 52px;
+  color: rgba(127, 255, 255, 0.95);
+}
+
+/* line 113, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+button {
+  color: rgba(127, 255, 255, 0.75);
+  background: transparent;
+  outline: 1px solid rgba(127, 255, 255, 0.75);
+  border: 0px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* line 121, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+button:hover {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+
+/* line 124, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home.scss */
+button:active {
+  color: #000000;
+  background-color: rgba(0, 255, 255, 0.75);
+}
+/* line 1, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 5, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+body {
+  background-color: #000000;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  overflow: hidden;
+}
+/* line 6, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+body .title-s {
+  z-index: 3;
+  color: red;
+  text-align: center;
+}
+/* line 12, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+body .container-s {
+  margin-top: -70px;
+}
+
+/* line 22, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+a {
+  color: #ffffff;
+}
+
+/* line 26, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+#info-s {
+  position: absolute;
+  width: 100%;
+  color: #ffffff;
+  padding: 5px;
+  font-family: Monospace;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+/* line 38, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+#menu-s {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 45, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+.element-s {
+  width: 220px;
+  height: 260px;
+  box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.5);
+  border: 1px solid rgba(127, 255, 255, 0.25);
+  text-align: center;
+  cursor: default;
+}
+
+/* line 54, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+.element-s:hover {
+  box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.75);
+  border: 1px solid rgba(127, 255, 255, 0.75);
+}
+
+/* line 59, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+.element-s .number-s {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  color: rgba(127, 255, 255, 0.75);
+}
+
+/* line 67, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+.element-s .symbol-s {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  font-size: 100px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.95);
+}
+
+/* line 78, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+.element-s .details-s {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  font-size: 52px;
+  color: rgba(127, 255, 255, 0.95);
+}
+
+/* line 87, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+button {
+  color: rgba(127, 255, 255, 0.75);
+  background: transparent;
+  outline: 1px solid rgba(127, 255, 255, 0.75);
+  border: 0px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* line 95, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+button:hover {
+  background-color: rgba(0, 255, 255, 0.5);
+}
+
+/* line 98, /home/andrea/Scrivania/rails-angular-test/tredi/app/assets/stylesheets/home_square.scss */
+button:active {
+  color: #000000;
+  background-color: rgba(0, 255, 255, 0.75);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
